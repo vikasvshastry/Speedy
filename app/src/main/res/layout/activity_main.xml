@@ -110,4 +110,12 @@
         android:layout_alignBottom="@+id/start"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:text="Search for GPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

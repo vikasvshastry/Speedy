@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements IBaseGpsListener 
         final Button start = findViewById(R.id.start);
         final Button reset = findViewById(R.id.reset);
         final Button stop = findViewById(R.id.stop);
+        final Button search = findViewById(R.id.search);
         textView = findViewById(R.id.textView);
         dist = findViewById(R.id.dist);
 
@@ -88,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements IBaseGpsListener 
                 //just request the permission
                 ActivityCompat.requestPermissions(this,permissionsRequired,PERMISSION_CALLBACK_CONSTANT);
             }
-
             SharedPreferences.Editor editor = permissionStatus.edit();
             editor.putBoolean(permissionsRequired[0],true);
             editor.commit();
@@ -99,9 +99,17 @@ public class MainActivity extends AppCompatActivity implements IBaseGpsListener 
         callMe();
         handler = new Handler();
 
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callMe();
+            }
+        });
+
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                callMe();
                 StartTime = SystemClock.uptimeMillis();
                 handler.postDelayed(runnable, 0);
 
