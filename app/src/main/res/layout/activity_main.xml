@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:alpha="0.5"/>
+
+    <ImageButton
+        android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/speedometer"/>
+
+    <View
+        android:id="@+id/needle"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/needle"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/txtCurrentSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 meters/hour"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#ffffff"
+        android:background="#4d4d4d"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+</RelativeLayout>
