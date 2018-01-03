@@ -12,8 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back"
-        android:alpha="0.5"/>
+        android:background="@drawable/back"/>
 
     <ImageButton
         android:id="@+id/img"
@@ -22,30 +21,99 @@
         android:layout_centerInParent="true"
         android:background="@drawable/speedometer"/>
 
-    <View
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ensure that gps is on and location is set."
+        android:textColor="#dddddd"
+        android:gravity="center"
+        android:layout_margin="5dp"/>
+
+    <ImageView
         android:id="@+id/needle"
-        android:layout_width="70dp"
-        android:layout_height="25dp"
-        android:layout_alignBottom="@+id/img"
+        android:layout_width="170dp"
+        android:layout_height="3dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/needle"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="9dp"
+        android:layout_alignBottom="@+id/img"
+        android:background="#ff0000"
+        android:paddingRight="200dp"/>
 
     <TextView
         android:id="@+id/txtCurrentSpeed"
-        android:layout_width="wrap_content"
+        android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:text="0.0 meters/hour"
+        android:gravity="center"
+        android:text="000.0 m/s"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_centerInParent="true"
         android:layout_below="@+id/img"
-        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-condensed"
         android:textColor="#ffffff"
-        android:background="#4d4d4d"
+        android:background="#111111"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"/>
+        android:paddingBottom="5dp"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:text="00:00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        android:textColor="#009688"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 km"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_below="@+id/textView"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dist"
+        android:text="Please ensure that location permission is set."
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:text="Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCurrentSpeed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:id="@+id/start" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/start"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/reset" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop"
+        android:layout_alignBottom="@+id/start"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
